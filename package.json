@@ -5,8 +5,8 @@
   "author": "Decagon <info@decagon.dev>",
   "private": true,
   "scripts": {
-    "serve": "node lib/app",
-    "dev": "nodemon lib/app.js",
+    "serve": "node lib/index",
+    "dev": "nodemon lib/index",
     "compile": "yarn tsc",
     "compile:watch": "yarn tsc --watch --preserveWatchOutput"
   },

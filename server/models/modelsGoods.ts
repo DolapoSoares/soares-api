@@ -8,7 +8,7 @@ type identity = {
     [keys:string]: number
 }
 
-let products = require("../../data/product")
+let products = require("../../data/Products")
 
 //Creating get request
     export function findItAll(){
@@ -39,7 +39,7 @@ let products = require("../../data/product")
         return new Promise((resolve, reject) => {
             const newItems = {id:generateId(),...item}
             products.push(newItems)
-            writeToDatabase('./data/product.json', products)
+            writeToDatabase('./data/Products.json', products)
             resolve(newItems)
         })
     }
@@ -49,7 +49,7 @@ let products = require("../../data/product")
        return new Promise((resolve,reject) => {
         const j = products.findIndex((i:identity) => i.id === id)
         products[j] ={id, ...product} as any
-        writeToDatabase('./data/product.json', products)
+        writeToDatabase('./data/Products.json', products)
         resolve(products[j])
        })
    }
