@@ -8,7 +8,7 @@ const server :Server = http.createServer((req: IncomingMessage, res: ServerRespo
     let change = req.url as string;
     if(change === "/api/products" && req.method ==="GET"){
       getProduct(req,res);
-    }else if(change.match(/\api\/products\/([0-9]+)/) && req.method === "GET"){
+    }else if(change.match(/\/api\/products\/([0-9]+)/) && req.method === "GET"){
       const id = +change.split('/').slice(-1)[0];
       getOneProduct(req,res,id);
     }else if(change === "/api/products" && req.method === "POST"){

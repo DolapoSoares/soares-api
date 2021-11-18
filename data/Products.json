@@ -3,29 +3,20 @@
         "id": 1,
         "productName": "T Shirt",
         "productDescription": "Men's Vintage Shirt Casual Short Sleeve T-Shirt",
-        "productVarieties": [
-            {
-                "size": "large",
-                "color": "orange",
-                "quantity": "15",
-                "images": [
-                    "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/83/453283/1.jpg?6332",
-                    "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/83/453283/2.jpg?6332"
-                ],
-                "price": "23000"
-            },
-            {
-                "size": "medium",
-                "color": "large",
-                "quantity": "35",
-                "images": [
-                    "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/86/690064/1.jpg?7852",
-                    "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/86/690064/3.jpg?3113"
-                ],
-                "price": "35000"
-            }
-        ],
+        "productSize": "large",
+        "productColor": "orange",
+        "productQuantity": "15",
+        "productImage": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/83/453283/1.jpg?6332",        
+        "productPrice": "23000",
         "dateUploaded": "1636633307531",
         "dateEdited": "1636633307531"
+    },
+    {
+        "id": 2,
+        "productName": "Baalongg",
+        "productDescription": "It is filled with non love language",
+        "productVarieties": "",
+        "dateUploaded": "2021-11-17T18:44:51.694Z",
+        "dateEnded": "2021-11-17T18:44:51.694Z"
     }
 ]

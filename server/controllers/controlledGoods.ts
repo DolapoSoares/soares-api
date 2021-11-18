@@ -39,11 +39,13 @@ export async function getOneProduct(
 export async function createProduct(req: IncomingMessage,res: ServerResponse){
     try{
         const body = (await getData(req)) as string;
-        const { productName, productDescription, productVarieties } = JSON.parse(body);
+        const { productName, productDescription, productColor , productQuantity , productPrice} = JSON.parse(body);
         const product:any = {
             productName,
             productDescription,
-            productVarieties,
+            productColor , 
+            productQuantity , 
+            productPrice,
             dateUploaded: new Date().toISOString(),
             dateEnded: new Date().toISOString()
         };
@@ -67,11 +69,13 @@ export async function  updateProducts(
             res.end(JSON.stringify({message: "Organization not found"}));
         }else{
             const body: any = await getData(req);
-            const { productName, productDescription, productVarieties } = JSON.parse(body);
+            const { productName, productDescription, productColor , productQuantity , productPrice} = JSON.parse(body);
             const productData: any = {
                 productName: productName || product.productName,
-                productDescription: productDescription || product.productName,
-                productVarieties: productVarieties || product.productVarieties,
+                productDescription: productDescription || product.productDescription,
+                productColor: productColor || product.productColor,
+                productQuantity: productQuantity || product.productQuantity,
+                productPrice: productPrice || product.productPrice,
                 dateUploaded : product.dateUploaded,
                 dateEdited: new Date().toISOString(),
             };
@@ -93,7 +97,7 @@ export async function deleteProduct(
         const product = await findById(id);
         if(!product) {
             res.writeHead(400, { "Content-Type" : "application/json"});
-            res.end(JSON.stringify({message: "Organization not found"}))
+            res.end(JSON.stringify({message: "Product not found"}))
         }else{
             await idDelete(id);
             res.writeHead(200, { "Content-Type" : "application/json"});
